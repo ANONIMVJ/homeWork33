@@ -1,8 +1,6 @@
-// api/classes.ts
 import instance from "./instance";
 import { Class, Student } from "@/types";
 
-// Barcha sinflarni olish
 export const getClasses = async () => {
   try {
     const res = await instance.get<Class[]>("/classes");
@@ -13,7 +11,6 @@ export const getClasses = async () => {
   }
 };
 
-// Sinf qo‘shish
 export const addClass = async (newClass: Omit<Class, "id">) => {
   try {
     const res = await instance.post("/classes", newClass);
@@ -24,7 +21,6 @@ export const addClass = async (newClass: Omit<Class, "id">) => {
   }
 };
 
-// Sinfni yangilash
 export const updateClass = async (updatedClass: Class) => {
   try {
     const res = await instance.put(`/classes/${updatedClass.id}`, updatedClass);
@@ -35,7 +31,6 @@ export const updateClass = async (updatedClass: Class) => {
   }
 };
 
-// Sinf va unga tegishli o‘quvchilarni o‘chirish
 export const deleteClassWithStudents = async (classId: string) => {
   try {
     const studentsRes = await instance.get<Student[]>("/students");

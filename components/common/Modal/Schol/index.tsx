@@ -9,7 +9,6 @@ import {
   TextAreaField
 } from "./ScholModal.styles";
 
-// School type
 interface School {
   name: string;
   location: string;
@@ -20,7 +19,6 @@ interface School {
   overallClassCount: number | string;
 }
 
-// Modal Props
 interface SchoolModalProps {
   isOpen: boolean;
   onClose: () => void;

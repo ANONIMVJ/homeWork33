@@ -20,7 +20,7 @@ const ClassModal = ({
   inputsValues,
   onInputChange,
 }: Props) => {
-  if (!isOpen) return null; // modal ko‘rinmasin
+  if (!isOpen) return null;
 
   return (
     <ModalWrapper isOpen={isOpen}>

@@ -47,7 +47,7 @@ const SchoolPage = () => {
 
   const handleSaveUpdate = async () => {
     if (school) {
-      const { name, location, phoneNumber, about, overallStudentCount, overallStaffCount, overallClassCount } = school;
+      const { name, location, phoneNumber, about } = school;
       if (!name || !location || !phoneNumber || !about) {
         alert("Iltimos, barcha maydonlarni to‘ldiring.");
         return;
@@ -66,7 +66,7 @@ const SchoolPage = () => {
   };
 
   const handleAddSchool = async () => {
-    const { name, location, phoneNumber, about, overallStudentCount, overallStaffCount, overallClassCount } = newSchool;
+    const { name, location, phoneNumber, about } = newSchool;
     if (!name || !location || !phoneNumber || !about) {
       alert("Iltimos, barcha maydonlarni to‘ldiring.");
       return;

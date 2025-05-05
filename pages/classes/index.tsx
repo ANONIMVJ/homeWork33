@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Class, Student } from "@/types";
+import { Class } from "@/types";
 import {
   getClasses,
   addClass,

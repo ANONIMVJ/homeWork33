@@ -1,18 +1,16 @@
 import { School } from "@/types";
 import instance from "./instance";
 
-// Maktab ma'lumotlarini olish
 export const getSchoolInfo = async () => {
   try {
     const res = await instance.get<School[]>("/school");
-    return res.data.length > 0 ? res.data[0] : null; // Birinchi maktabni yoki null qaytaradi
+    return res.data.length > 0 ? res.data[0] : null; 
   } catch (e) {
     alert("Maktab ma’lumotlarini olishda xatolik yuz berdi!");
     console.error(e);
   }
 };
 
-// Maktab ma'lumotlarini yangilash
 export const updateSchoolInfo = async (updatedSchool: School) => {
   try {
     const res = await instance.put(`/school/${updatedSchool.id}`, updatedSchool);
@@ -23,7 +21,6 @@ export const updateSchoolInfo = async (updatedSchool: School) => {
   }
 };
 
-// Yangi maktab qo'shish
 export const addSchool = async (newSchool: Omit<School, "id">) => {
   try {
     const res = await instance.post("/school", newSchool);
@@ -34,7 +31,6 @@ export const addSchool = async (newSchool: Omit<School, "id">) => {
   }
 };
 
-// Maktabni o'chirish
 export const deleteSchool = async (id: string | number) => {
   try {
     const res = await instance.delete(`/school/${id}`);

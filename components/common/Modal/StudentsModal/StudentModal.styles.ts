@@ -28,13 +28,13 @@ export const ModalWrapper = styled.div`
 
 export const ModalButtonContainer = styled.div`
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
+  flex-direction: column;
   gap: 10px;
 `;
 
 export const ModalButton = styled.button`
-  background-color: teal; /* Teal button background */
-  color: black; /* Black text */
+  background-color: teal;
+  color: black; 
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -53,7 +53,7 @@ export const ModalButton = styled.button`
 
 export const InputFieldContainer = styled.div`
   display: flex;
-  flex-direction: column; /* Stack input fields vertically */
+  flex-direction: column;
   gap: 10px;
 `;
 
